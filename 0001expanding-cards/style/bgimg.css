@@ -1,0 +1,25 @@
+/* 设置每一个cards的背景图片 */
+.box .cards:nth-of-type(1) {
+	background-image: url("../images/001.jpg");
+}
+.box .cards:nth-of-type(2) {
+	background-image: url("../images/002.jpg");
+}
+.box .cards:nth-of-type(3) {
+	background-image: url("../images/003.jpg");
+}
+.box .cards:nth-of-type(4) {
+	background-image: url("../images/004.jpg");
+}
+.box .cards:nth-of-type(5) {
+	background-image: url("../images/005.jpg");
+}
+
+.box .cards {
+	/* 设置图片不重复 */
+	background-repeat: no-repeat;
+	/* 设置图片只能改变尺寸以撑满盒子,盒子不留白,但是可能图片会不完整 */
+	background-size: cover;
+	/* 设置背景图片居中显示 */
+	background-position: center;
+}

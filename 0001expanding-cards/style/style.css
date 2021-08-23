@@ -1,0 +1,68 @@
+* {
+	/* 设置盒子大小包含边框等 */
+	box-sizing: border-box;
+}
+
+body {
+	/* 高度为100%窗口高度 */
+	height: 100vh;
+	/* 实现主体的追评垂直居中 */
+	display: flex;
+	/* 垂直居中 */
+	align-items: center;
+	/* 水平居中 */
+	justify-content: center;
+
+	/* 将主体的"外边距"设置为0 */
+	margin: 0;
+}
+
+body .box {
+	/* 设置主体的宽度为90%窗口宽度 */
+	width: 90vw;
+	/* 实现cards水平放置 */
+	display: flex;
+}
+
+body .cards {
+	/* cards的高度为窗口的80% */
+	height: 80vh;
+	/* 设置圆角 */
+	border-radius: 46px;
+	/* 设置鼠标进入变为"小手" */
+	cursor: pointer;
+	/* 实现 "平均分布" */
+	flex: 1;
+	/* 将cards的"外边距"设置为10px */
+	margin: 10px;
+	/* 设置相对定位 . 用来作为h3绝对定位的标准 */
+	position: relative;
+	/* 设置flex的值得变化动画 */
+	transition: flex 0.8s ease-in 0s;
+}
+
+body .box .cards h3 {
+	/* 设置文字颜色 */
+	color: azure;
+	/* 设置文字位置 */
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	/* 设置文字透明度为0 */
+	opacity: 0;
+}
+
+/* 设置拥有active类的卡片的样式 */
+body .box .cards.active {
+	/* 实现"突出显示" */
+	flex: 6;
+}
+
+/* 设置拥有active类的卡片的文字样式 */
+body .box .cards.active h3 {
+	/* 透明度变为1 */
+	opacity: 1;
+	/* 设置透明度变化动画 */
+	transition: opacity 0.8s ease-in 0s;
+	/* 此处动画不设置在上面的原因是: 如果设置在 body .box .cards h3 选择器内 会导致页面瘦子加载时会看到文字从不透明变透明的过程 , 因为opacity默认为1*/
+}

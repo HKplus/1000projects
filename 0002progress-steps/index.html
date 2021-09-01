@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>步骤进度条</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<section id="box" class="box">
+			<div class="progress" id="progress">
+				<div class="progress-line" id="progress-line"></div>
+				<div class="circle active" id="circle">1</div>
+				<div class="circle" id="circle">2</div>
+				<div class="circle" id="circle">3</div>
+				<div class="circle" id="circle">4</div>
+			</div>
+
+			<button id="prev" class="prev">上一步</button>
+			<button id="next" class="next">下一步</button>
+			<button id="add">添加项</button>
+			<button id="remove">删除项</button>
+		</section>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
